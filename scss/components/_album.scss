@@ -1,0 +1,285 @@
+
+.album{
+    margin-bottom: 30px !important;
+    cursor: pointer;
+    &_no{
+       font-family: 'PlayfairDisplay', serif;
+       font-size: 4rem;
+       font-weight: bold;
+       font-style: normal;
+       font-stretch: normal;
+       line-height: 1.77;
+       letter-spacing: normal;
+       text-align: center;
+       color: #2e3038; 
+    }
+    
+    &_image{
+        width: 100%;
+        height: 603px;
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.4s ease-in-out;
+        transform: scale(1.1);
+    }
+    &_title{
+       font-family: 'PlayfairDisplay', serif;
+       font-size: 4rem;
+       font-weight: bold;
+       font-style: normal;
+       font-stretch: normal;
+       line-height: 1.77;
+       letter-spacing: normal;
+       text-align: center;
+       color: #2e3038;
+       padding: 24px;    
+    }
+    &_date{
+      font-family: 'Muli',sans-serif;
+      font-size: 1.8rem;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.28;
+      letter-spacing: normal;
+      text-align: center;
+      color: $cl-p;    
+    }
+    &_view{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+         left: 0;
+        transition: all 0.4s ease-in-out;
+        & span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1.5);
+            color: #ffffff;
+            font-size: 2rem !important;
+            font-weight: bold;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    
+    &:hover{
+        & .album_view{
+            background-color: rgba(170,170,170,0.4);
+            transition: all .4s linear;
+            & span{
+                opacity: 1;
+                transition: all 0.4s ease-in-out;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        
+        & .album_image{
+        transition: all 0.4s ease-in-out;
+        transform: scale(1);
+    }
+    }
+}
+
+.photo_league_gallery{
+        list-style: none;
+        
+        & li{
+            display: inline-block;
+            margin: 0 !important;
+            & img{
+                backface-visibility: hidden;
+                transition: all .3s linear;
+                width: 100%;
+                margin-bottom: 3px;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+                    
+                }
+            }
+        }
+        &_picture{
+            opacity: 1;
+            animation: show .5s linear;
+        }
+}
+
+.column {
+  padding: 0 8px;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  background-color: black;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+    animation: fade 1.5s;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white !important;
+  font-weight: bold;
+  font-size: 2.4rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: gray;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1.7rem;
+  padding: 8px 12px;
+  position: absolute;
+  top: -250;
+}
+
+.album_img {
+  margin-bottom: -4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+@media(min-height: 1080px){
+    .photo_holder{
+        margin-bottom: 600px !important;
+    }
+    
+}
+
+@media(max-width: 1360px){
+    .album_image{
+        height: 450px !important;
+    }
+    
+}
+
+@media(max-width: 1116px){
+    .album_image{
+        height: 380px !important;
+    }
+    
+}
+
+@media(max-width: 570px){
+    .album_image{
+        height: 350px !important;
+    }
+}
+
+@media(max-width: 430px){
+    .album_image{
+        height: 300px !important;
+    }
+}
+
+@media(max-width: 350px){
+    .album_image{
+        height: 250px !important;
+    }
+}
+
+@keyframes show{
+     0%{
+     	opacity: 0;
+        transform: scale(0); 
+     } 
+     100% {
+     	opacity: 1;
+        transform: scale(1); 
+     }
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}

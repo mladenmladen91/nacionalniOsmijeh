@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="258.144" height="160" viewBox="0 0 258.144 160">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#06aaca"/>
+            <stop offset="1" stop-color="#00859f"/>
+        </linearGradient>
+    </defs>
+    <path id="Union_1" d="M-10565 1326a10 10 0 0 1-10-10v-140a10 10 0 0 1 10-10h228a10 10 0 0 1 10 10v60l10.143 10.144-10.143 10.143V1316a10 10 0 0 1-10 10z" class="cls-1" data-name="Union 1" transform="translate(10575.002 -1166)"/>
+</svg>

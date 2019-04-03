@@ -1,0 +1,49 @@
+.contact_inputs{
+    border: none;
+    border-bottom: solid 1px #8b92ab;
+    opacity: 0.8;
+    font-family: 'Muli',sans-serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8b92ab;
+    padding: 17px 0;
+    transition: border .4s ease;
+    &:focus{
+        box-shadow: none;
+        border: none; 
+        border-bottom: solid 3px #06aaca;
+        transition: border .4s ease;
+    }
+    
+}
+.form_btn{
+    border-radius: 35px;
+    box-shadow: 0 3px 18px 0 rgba(6, 170, 202, 0.3);
+    background-color: #06aaca;
+    color: #ffffff;
+    padding: 20px 66px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Muli', sans-serif;
+    font-weight: 900;
+    font-size: 2.4rem;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    &:hover{
+       background: darken(#06aaca, 10%); 
+           
+    }
+    &:focus{
+        border: none !important;
+        box-shadow: none !important;
+        outline: none;
+    }
+}

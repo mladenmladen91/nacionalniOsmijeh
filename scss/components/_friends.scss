@@ -1,0 +1,103 @@
+.friends{
+    &_holder{
+        background-color: rgba(0, 0, 0, 0.04); 
+        margin-bottom: 150px;
+    }
+    
+    padding: 20px;
+    &_container{
+        position: relative;
+        background: #ffffff;
+        padding: 90px;
+        transition: all .3s linear;
+        animation: friendShow 1s linear;
+        height: 261px;
+        &_image{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            max-width: 70%;
+        }
+        
+        &:hover{
+            box-shadow: 0 0 10px 10px rgba(0,0,0, .1);
+            transition: all .3s linear;
+                
+            }
+        }
+    
+    &_content{
+         font-family: 'Muli', sans-serif;
+         font-size: 18px;
+         font-weight: 300;
+         font-style: normal;
+         font-stretch: normal;
+         line-height: 1.5;
+         letter-spacing: normal;
+         text-align: left;
+         color: $cl-p;
+    }
+}
+
+.join_btn{
+    font-size: 2.4rem !important;
+}
+
+
+
+@media(min-height: 1080px){
+    .friends_holder{
+        margin-bottom: 600px !important;
+    }
+    .no_friends{
+        margin-bottom: 500px;
+    }
+}
+
+@media(max-width: 1301px){
+    .friends_container{
+        height: 230px !important;
+    }
+}
+@media(max-width: 424px){
+    .onama_fotografija{
+       margin-top: 60px !important;    
+    }   
+}
+
+@media(max-width: 375px){
+.friends_title{
+    font-size: 7.2rem !important;
+}
+    .join_btn{
+        font-size: 1.8rem !important;
+        padding: 20px 0px !important;
+    }
+}
+
+@media(max-width: 362px){
+    .join_btn{
+        font-size: 1.8rem !important;
+        padding: 20px 0px !important;
+    }
+}
+
+@media(max-width: 340px){
+    .join_btn{
+        font-size: 1.1rem !important;
+        
+    }
+}
+
+@keyframes friendShow{
+     0%{
+     	opacity: 0;
+        transform: rotateX(90deg); 
+     } 
+     100% {
+     	opacity: 1;
+        transform: rotateX(0deg); 
+     }
+}

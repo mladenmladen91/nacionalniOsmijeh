@@ -1,0 +1,145 @@
+.footer_title{
+      color: #404040;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.8rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.18;
+        letter-spacing: normal;
+        text-align: left;
+}
+.footer_title_underline{
+        border-top: 5px solid #41bdd5;
+}
+.table_holder{
+    padding: 40px;
+}
+.underline{
+    border-bottom: 4px solid #41bdd5;
+}
+.table_liga{
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 500;
+    color: #404040;
+    font-size: 1.2rem;
+    border: 1px solid #95989a;
+}
+.table_liga thead{
+    background: #41bdd5;
+    color: white;
+    border: 1px solid #41bdd5;
+}
+
+.table_liga thead th{
+    text-align: center;
+    padding: 10px;
+            
+}
+
+.table_liga tbody td{
+    text-align: center;
+    padding: 7px;
+    border-bottom: 1px solid #95989a;
+}
+.print_span{
+    background: white;
+    color: #41bdd5;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.print_span:hover{
+    background: #95989a;
+    color: white;
+}
+.view_span{
+    background: #41bdd5;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.view_span:hover{
+    background: #95989a;
+    color: white;
+}
+.changeSomething{
+    font-size: 20px;
+    color: #41bdd5;
+}
+.deleteBtn{
+    font-size: 20px;
+    color: orangered;
+    cursor: pointer;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #13a89e;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.dt-button {
+    background-color: LightGreen;
+}
+.excelTest{
+    background: green !important;
+    color: white !important;
+}
+

@@ -1,0 +1,189 @@
+.footer{
+    background: url(../images/Pozadina.svg) 49% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0 !important;
+    position: relative;
+    width: 100%;
+    
+    &_left{
+        visibility: hidden;
+        transform: translateY(30%);
+        transition: all .4s ease;
+        
+    }
+    
+    &_right{
+        visibility: hidden;
+        transform: translateX(30%);
+        transition: all .7s ease;
+    }
+    
+    &_container{
+        padding: 20px 0;
+    }
+    &_text{
+        text-align: center;
+        color: #ffffff;
+        padding-bottom: 6px;
+        font-family: 'Muli', sans-serif;
+        font-size: 1.8rem;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+    }
+}
+.djecak, .djevojcica{
+    position: absolute;
+    z-index: 100 !important;
+    overflow: hidden !important;
+    top: -30;
+    height: 351;
+    
+}
+.djevojcica{
+    left: -30;
+    & img{
+        overflow: hidden !important;
+    }
+}
+.djecak{
+    right: -20;
+    & img{
+        
+    }
+}
+.social_link{
+    transition: transform .3s ease;
+    backface-visibility: hidden;
+    &:hover{
+        backface-visibility: hidden;
+        transform: scale(1.02);
+        transition: transform .3s ease;
+    }
+}
+
+
+@media(min-height: 1080px){
+    .footer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        
+    }
+}
+
+@media(max-width: 1263px){
+    .djecak, .djevojcica{
+        width: 300px !important;
+        bottom: 50 !important;
+        
+        & img{
+            height: 200;
+            width: 200;
+        }
+    }
+    .djecak{
+        right: -150;
+        & img{
+            right: -50;
+        }
+    }
+}
+
+@media(max-width: 1191px){
+    .djecak, .djevojcica{
+       top: 150 !important;
+        height: 170;
+    }
+   
+}
+
+@media(max-width: 1024px){
+    .djecak, .djevojcica{
+       top: 150 !important;
+        height: 172;
+    }
+    .djecak{
+        right: -150;
+        & img{
+            right: -50;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .djecak, .djevojcica{
+        top: 200 !important;
+        height: 175;
+    }
+}
+
+@media(max-width: 992px){
+    .djecak, .djevojcica{
+        height: 169;
+    }
+}
+
+@media(max-width: 900px){
+    .djecak, .djevojcica{
+        top: 200 !important;
+        height: 175;
+    }
+}
+
+@media(max-width: 600px){
+    .djevojcica{
+        width: 230px !important;
+    }
+}
+
+@media(max-width: 576px){
+    .djecak, .djevojcica{
+        top: 180 !important;
+        height: 170;
+    }
+}
+
+@media(max-width: 500px){
+    .djecak, .djevojcica{
+        width: 230px !important;
+        height: 133.4px !important;
+        top: 220 !important;
+        
+        
+        & img{
+            height: 155;
+            width: 155;
+        }
+    }
+    .djecak{
+        right: -120;
+        & img{
+            height: 140 !important;
+            right: -50;
+        }
+    }
+}
+@media(max-width: 443px){
+    .djevojcica{
+        width: 200px !important;
+    }
+}
+
+@media(max-width: 380px){
+    .djevojcica{
+        width: 180px !important;
+    }
+}
+
+@media(max-width: 338px){
+    .djevojcica{
+        width: 160px !important;
+    }
+}
+    
+

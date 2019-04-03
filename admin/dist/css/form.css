@@ -1,0 +1,121 @@
+.footer_title{
+      color: #404040;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.8rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.18;
+        letter-spacing: normal;
+        text-align: left;
+}
+.footer_title_underline{
+        border-top: 5px solid #41bdd5;
+}
+.table_holder{
+    padding: 40px;
+}
+.underline{
+    border-bottom: 4px solid #41bdd5;
+}
+.form_label{
+        font-size: 2rem;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        color: #95989a;
+}
+.form_btn{
+        cursor: pointer;
+        border-radius: 5px;
+        background: #41bdd5;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        border: none;
+        padding: 1.8rem 3.8rem;
+        transition: transform .3s ease;
+        backface-visibility: hidden;
+        
+        
+}
+.form_btn:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+        transition: transform .3s ease;
+}
+.form_btn:focus{
+        border: none;
+        box-shadow: none;
+        outline: none;
+        transition: transform .3s ease; 
+}
+.giveup_btn{
+        cursor: pointer;
+        border-radius: 5px;
+        background: red;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        border: none;
+        padding: 1.8rem 3.8rem;
+        transition: transform .3s ease;
+        backface-visibility: hidden;
+        
+}
+.giveup_btn:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+        transition: transform .3s ease;
+}
+.giveup_btn:focus{
+        border: none;
+        box-shadow: none;
+        outline: none;
+        transition: transform .3s ease; 
+}
+
+
+.contact_inputs{
+    height: 5rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+    background-color: white;
+    margin-bottom: 20px;
+    color: #95989a;
+    font-size: 1.7rem;
+}
+.contact_inputs:focus{
+        box-shadow: 0 1px 3px 0 #95989a;
+}
+
+
+
+.form_result{
+    color: red !important;
+}
+.text_result{
+    color: red !important;
+}
+#editor {
+    min-height: 200px !important;
+}
+
+@media(max-width: 517px){
+    .form_btn{
+        margin: 0px 200px 40px 0 ;
+    }
+   
+}
+

@@ -1,0 +1,137 @@
+.footer_title{
+      color: #404040;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.8rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.18;
+        letter-spacing: normal;
+        text-align: left;
+}
+.footer_title_underline{
+        border-top: 5px solid #41bdd5;
+}
+.table_holder{
+    padding: 40px;
+}
+.underline{
+    border-bottom: 4px solid #41bdd5;
+}
+.change_btn{
+        cursor: pointer;
+        border-radius: 5px;
+        background: #41bdd5;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        text-align: left;
+        border: none;
+        padding: 1.8rem 3.8rem;
+        transition: transform .3s ease;
+        backface-visibility: hidden;
+}
+.change_btn:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+        transition: transform .3s ease;
+}
+.change_btn:focus{
+        border: none;
+        box-shadow: none;
+        outline: none;
+        transition: transform .3s ease; 
+}
+.show_text{
+    color: #95989a;
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    
+}
+.show_text img{
+    max-width: 100% !important;
+}
+
+.photo_league_gallery{
+        list-style: none;
+}
+.photo_league_gallery li{
+            display: inline-block;
+            margin: 0px !important;
+            
+}
+.photo_league_gallery li img{
+                backface-visibility: hidden;
+                transition: all .3s linear;
+                width: 100%;
+                margin-bottom: 3px;
+}
+.photo_league_gallery li img:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+                    
+ }
+.deleteBtn{
+    font-size: 20px;
+    color: orangered;
+    cursor: pointer;
+}
+.modal{
+    background-color: rgba(#41bdd5,.6)  !important;
+    z-index: 10000 !important;
+}
+.modal-title{
+    color: white !important;
+}
+
+.modal-header{
+    background-color: transparent !important;
+    border-bottom: none !important;
+}
+.popup_header{
+    background-color: #41bdd5 !important;
+}
+.close{
+    color: white !important;
+    font-size: 2rem !important;
+}
+.save_tag{
+    text-align: center;
+    padding: 10px;
+}
+.save_btn{
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background: green;
+    cursor: pointer;
+}
+.decline_btn{
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background: red;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.radio_cover, .save_btn, .decline_btn{
+    display: none;
+}
+option_container
+@media(max-width: 1119px){
+    .photo_league_gallery{
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 520px){
+    .option_container{
+        margin-top: 10px !important;
+    }
+}
