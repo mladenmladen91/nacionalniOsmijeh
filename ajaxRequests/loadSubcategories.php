@@ -26,11 +26,9 @@
 ?>
                      
 <div class="col-lg-12 <?php echo($broj > 0)? 'subcategory_active':'subcategory' ?> mt-4"  
-    <?php if($broj == 0){ ?>  
-     onclick="addDonation(<?php echo $podkategorija ?>, '<?php echo $podkategorija_naziv ?>', <?php echo $kategorija ?>)"
+    onclick="addDonation(<?php echo $podkategorija ?>, '<?php echo $podkategorija_naziv ?>', <?php echo $kategorija ?>)"
      title="Odaberi"
-    <?php } ?> 
-     >
+    >
      <input type="hidden" class="kategorija_id" value="<?php echo $kategorija ?>">
      <input type="hidden" class="podkategorija_id" value="<?php echo $podkategorija ?>">
      <span class="subcategory_name"><?php echo $podkategorija_naziv ?></span>

@@ -69,7 +69,7 @@
                              }
                              
                           ?>
-                          <span class="count" ><?php echo $donacijaCount; ?></span>
+                          <span class="count" <?php echo ($donacijaCount > 999)? "style='font-size: 130px !important'" : '' ?> ><?php echo $donacijaCount; ?></span>
                       </div>
                       <div class="col-lg-6 number_container_text" style="border-left: 2px solid #ffffff;">
                           Broj doniranih artikala
