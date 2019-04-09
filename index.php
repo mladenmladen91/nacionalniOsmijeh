@@ -61,7 +61,15 @@
               <div class="col-lg-6 number_container_first">
                   <div class="row">
                       <div class="col-lg-6 number_container_donation">
-                          <span class="count" >296</span>
+                          <?php
+                             $donacijaQuery = mysqli_query($connection, "SELECT * FROM proizvod_donator WHERE status= 'donirano'");
+                             $donacijaCount = 0;
+                             while($row2 = mysqli_fetch_assoc($donacijaQuery)){
+                                 $donacijaCount = $donacijaCount + $row2['kolicina'];
+                             }
+                             
+                          ?>
+                          <span class="count" ><?php echo $donacijaCount; ?></span>
                       </div>
                       <div class="col-lg-6 number_container_text" style="border-left: 2px solid #ffffff;">
                           Broj doniranih artikala
