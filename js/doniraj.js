@@ -155,7 +155,7 @@ function addDonation(podkategorija_id, podkategorija_naziv, kategorija_id){
                 success: function (returndata) {
                     returndata = returndata.trim();
                     if(returndata !== "Success"){
-                        swal(returndata);
+                        
                     }else{
                         
                         // loading categories
