@@ -19,6 +19,201 @@
 
 <title>Početna</title>
 
+<style>
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart {
+  width: 50%;
+  justify-content: space-around ;
+  position: absolute;
+  top: -86;
+   right: 110;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  width: 320px;
+  height: 320px;
+  position: relative;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgb(80,192,214);
+  stroke-width: 1;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 1;
+  stroke-linecap: round;
+  
+}
+.circle_rotate{
+   animation: progress 1s ease-out forwards;     
+}    
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ffffff;
+}
+
+.circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #ffffff;
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  text-anchor: middle;
+  font-family: 'BebasNeue';    
+}
+
+@media(max-width: 1692px){
+    .single-chart {
+        right: 130;
+    }        
+}
+    
+@media(max-width: 1548px){
+    .single-chart {
+        right: 140;
+    }        
+}
+    
+@media(max-width: 1420px){
+    .single-chart {
+        right: 160;
+    }        
+}
+    
+@media(max-width: 1366px){
+    .single-chart {
+        top: -60;
+        right: 140;
+    }
+    .circular-chart{
+        height: 290;
+        width: 290;
+    }
+} 
+@media(max-width: 1350px){
+    .single-chart {
+        top: -80;
+    }
+    .percentage{
+        font-size: 2.4rem;
+    }
+} 
+    
+@media(max-width: 1247px){
+    .single-chart {
+        right: 160;
+    }
+   
+}
+    
+@media(max-width: 1164px){
+    .single-chart {
+        right: 130;
+    }
+    .circular-chart{
+        height: 250;
+        width: 250;
+    }
+} 
+    
+@media(max-width: 1024px){
+    .single-chart {
+        top: -55;
+        right: 100;
+    }
+    .circular-chart{
+        height: 210;
+        width: 210;
+    }
+}
+@media(max-width: 991px){
+    .single-chart {
+        top: 40;
+        left: 25%;
+    }
+    .circular-chart{
+        height: 210;
+        width: 210;
+    }
+} 
+@media(max-width: 576px){
+    .single-chart {
+        top: 40;
+        left: 25%;
+    }
+    .circular-chart{
+        height: 210;
+        width: 210;
+    }
+    .percentage{
+        font-size: 3rem;
+    }
+} 
+    
+@media(max-width: 400px){
+    .single-chart {
+        left: 23%;
+    }
+    
+}
+    
+@media(max-width: 368px){
+    .single-chart {
+        left: 21%;
+    }
+    
+} 
+
+@media(max-width: 368px){
+    .single-chart {
+        top: 55;
+    }
+    
+} 
+ 
+@media(max-width: 348px){
+    .single-chart {
+        left: 19%;
+    }
+    
+}    
+    
+@media(max-width: 328px){
+    .single-chart {
+        left: 18%;
+    }
+    
+}
+    
+@media(max-width: 320px){
+    .single-chart {
+        left: 16%;
+    }
+}    
+
+</style>
+
 </head>
 <body>
 
@@ -80,7 +275,49 @@
               <div class="col-lg-6">
                  <div class="row">
                       <div class="col-lg-6">
-                        <div class="round" style="animation-delay: -35s;"><span class="round_number count">73</span></div>
+                       <?php
+                          // getting amount of reserved products
+                          $rezervisani = 0;
+                          $queryProizvodi = "SELECT kolicina FROM proizvod_donator WHERE status = 'rezervisano' ";
+                          $proizvodResult = mysqli_query($connection, $queryProizvodi);
+                          if(!$proizvodResult){
+                            die(mysqli_error($connection));
+                          }
+                          while($row75 = mysqli_fetch_assoc($proizvodResult)){
+                             $rezervisani = $rezervisani + $row75['kolicina'];
+                          }
+                          
+                          // getting free articles
+                          $slobodni = 0;
+                          $queryProizvodi = "SELECT kolicina FROM proizvodi";
+                          $proizvodResult = mysqli_query($connection, $queryProizvodi);
+                          if(!$proizvodResult){
+                              die(mysqli_error($connection));
+                          }
+                          while($row72 = mysqli_fetch_assoc($proizvodResult)){
+                                $slobodni = $slobodni + $row72['kolicina'];
+                          }
+                          
+                          $procenat = floor(($donacijaCount/($slobodni + $donacijaCount + $rezervisani)) *100);
+                          
+                       ?>
+                      
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart orange">
+      <path class="circle-bg"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path class="circle"
+        stroke-dasharray="<?php echo $procenat ?>, 100"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <text x="18" y="27.35" class="percentage count"><?php echo $procenat ?></text>
+    </svg>
+  </div>  
                           
                       </div>
                       <div class="col-lg-6 number_container_text" style="height: 100px; padding: 0 20px">

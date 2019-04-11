@@ -65,8 +65,10 @@ $(document).ready(function() {
                if (pos < winTop + 800 ) {
                    $(".article_left").addClass("show_left");
                    $(".article_right").addClass("show_right");
+                   $(".circle").addClass("circle_rotate");
                }
             
+              
         });
     
     $('#counter').bind('inview', function(event, visible, visiblePartX, visiblePartY) {

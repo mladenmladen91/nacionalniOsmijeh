@@ -44,7 +44,7 @@
          
          
     if($postoji == 1 && sizeof($_SESSION['cart'][$redni]) < 9){
-        echo "kolicina, Već ste odabrali proizvod sa ovim karakteristikama";
+        echo "uzrast, Već ste odabrali proizvod sa ovim karakteristikama";
     }else{     
          
     if(sizeof($_SESSION['cart'][$redni]) === 9){
@@ -69,7 +69,7 @@
            
         
        if($postoji2 > 1 ){
-           echo "kolicina, Već ste odabrali proizvod sa ovim karakteristikama";
+           echo "uzrast, Već ste odabrali proizvod sa ovim karakteristikama";
        }else{
            echo 'Success';
        }
